@@ -16,6 +16,7 @@ class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
         this.jokeReturned = jokeReturned;
     }
 
+
     @Override
     protected String doInBackground(Void... nothing) {
         if (myApiService == null) {  // Only do this once
