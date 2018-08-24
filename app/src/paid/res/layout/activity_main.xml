@@ -12,7 +12,7 @@
         android:layout_height="wrap_content" />
     <fragment
         android:id="@+id/fragment"
-        android:name="com.udacity.gradle.builditbigger.MainActivityFragmentFree"
+        android:name="com.udacity.gradle.builditbigger.MainActivityFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout="@layout/fragment_main" />

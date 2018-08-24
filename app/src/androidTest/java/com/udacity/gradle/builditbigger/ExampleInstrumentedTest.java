@@ -21,8 +21,8 @@ import java.util.concurrent.ExecutionException;
 public class ExampleInstrumentedTest {
 
     @Rule
-    public ActivityTestRule<MainActivityFree> activityTestRule =
-            new ActivityTestRule<>(MainActivityFree.class);
+    public ActivityTestRule<MainActivity> activityTestRule =
+            new ActivityTestRule<>(MainActivity.class);
 
     @Test
     public void jokeNullOrEmptyTest() throws ExecutionException, InterruptedException {

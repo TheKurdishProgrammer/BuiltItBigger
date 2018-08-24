@@ -15,6 +15,7 @@ public class DisplayJokeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_joke);
         doBindings();
+
         String funnyJoke = getIntent().getStringExtra(BORING_JOKE);
         if(!TextUtils.isEmpty(funnyJoke))
             jokeTv.setText(funnyJoke);

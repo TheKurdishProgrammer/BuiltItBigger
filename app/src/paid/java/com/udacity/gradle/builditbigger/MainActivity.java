@@ -1,3 +1,4 @@
+package com.udacity.gradle.builditbigger;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,8 +7,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.example.jokepresenter.DisplayJokeActivity;
+
+import es.dmoral.toasty.Toasty;
+
 
 
 public class MainActivity extends AppCompatActivity implements OnJokeReturned {
@@ -18,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements OnJokeReturned {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
 
@@ -46,6 +52,8 @@ public class MainActivity extends AppCompatActivity implements OnJokeReturned {
     public void tellJoke(View view) {
 
 
+        Toasty.success(view.getContext(), getString(R.string.awesome), Toast.LENGTH_LONG, true).show();
+
         progressBar = findViewById(R.id.progress_joking);
         progressBar.setVisibility(View.VISIBLE);
 
@@ -66,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements OnJokeReturned {
         // and this view on be binded
         if (progressBar != null)
             progressBar.setVisibility(View.GONE);
+
 
         startActivity(intent);
     }
